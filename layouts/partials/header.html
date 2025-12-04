@@ -81,9 +81,16 @@
 
   <div class="color-overlay d-flex flex-column justify-content-center align-items-center align-content-center">
     <h1>{{ .Title }}</h1>
-    {{ with .Params.catchline }}
-      <h2>{{ . }}</h2>
+	<br/><br/>
+    {{ with .Params.phone }}
+      <h3 class='contact contact_phone'>{{ . }}</h3>
     {{ end }}
+    {{ with .Params.fb }}
+      <h3 class='contact contact_fb'><a href='https://facebook.com/{{ . }}' target="_blank">@{{ . }}</a></h3>
+    {{ end }}
+    {{ with .Params.instagram }}
+      <h3 class='contact contact_instagram'>{{ . }}</h3>
+    {{ end }}	
   </div>
 
 </div>
